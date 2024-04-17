@@ -28,58 +28,24 @@ useEffect(() => {
                   image={ImgSrc.home}
                   para="Go to home page"
                 >
-                  <div className="home_hover">
-                  <p className="login__forgot--button home_btns">
-                     <Link to="/login">Login</Link>
-                  </p>
-                  <p className="login__forgot--button home_btns">
-                     <Link to="/signup">Sign Up</Link>
-                  </p>
-                  </div>
+                <div>
+                  <p className="hovertext">Go back to the home page!!</p>
+                </div>
                 </Sectionscard>
                 </Link>
                 
-                <Link to="/lecture" style={{textDecoration: 'none'}}>
+                <Link to="/learn" style={{textDecoration: 'none'}}>
                 <Sectionscard
-                  name="Video Lectures"
+                  name="Learn"
                   image={ImgSrc.video}
                   para="Bored with reading here are some interesting lectures"
                 >
                   <div>
-                    <img src={ImgSrc.videolec1}></img>
-                    <img src={ImgSrc.videolec2}></img>
+                  <p className="hovertext">Learn About Superconductors!!</p>
+                  <p className="hovertext">Learn about the Mesinner effect!!</p>
                   </div>
                 </Sectionscard>
                 </Link>
-              </div>
-              <div className="sec-middle">
-                <button className="doubt" onClick={()=>{
-                      setOpened(!opened);
-                }}
-                style={{background:'transparent',border:"none"}} 
-                >
-                <Sectionscard
-                  name="Doubt Assistance"
-                  image={ImgSrc.doubt}
-                  para="Have doubts? We are here to help."
-                  >
-                    <img src={ImgSrc.doubtassistant}></img>
-                  </Sectionscard>
-                 </button>
-                 <button style={{background:'transparent',border:"none"}} >
-
-                <Link to="/blogs" style={{textDecoration: 'none'}}>
-                <Sectionscard
-                  name="Blogs"
-                  image={ImgSrc.blog}
-                  para="Read blogs related to on any topic of yor study."
-                >
-                <div>
-                  <p className="hovertext">Find Blogs about learning and teaching </p>
-                </div>
-                </Sectionscard>
-                </Link>
-                </button>
               </div>
               <div className="section_under">
               <Link to="/quiz" style={{textDecoration: 'none'}}>
@@ -89,8 +55,8 @@ useEffect(() => {
                   para="Want to test your skills take Test/Quiz."
                 >
                 <div>
-                  <p className="hovertext">Which is the most popular js framework ?</p>
-                  <p className="hovertext">Which is the most popular NoSQL Database ? </p>
+                  <p className="hovertext">Challenge yourself!</p>
+                  <p className="hovertext">What are HTC superconductors?</p>
                 </div>
                 </Sectionscard>
               </Link>
@@ -100,8 +66,7 @@ useEffect(() => {
                   para="See more features"
                 >
                   <div>
-                   <p className="hovertext">Web Designing</p>
-                   <p className="hovertext">Flutter Development</p>
+                   <p className="hovertext">Soon to come...</p>
                   </div>
                 </Sectionscard>
               </div>
@@ -109,11 +74,6 @@ useEffect(() => {
           </div>
         </div>
       </section>
-      {(opened===true)?(
-        <div id="chatbot"><Chatbot open={opened}/></div>
-      ):(
-        <div id="chatbot"><Chatbot/></div>
-      )}
       <Scrolltop showBelow={250} showLeft={true}/>
       <Footer />
     </div>

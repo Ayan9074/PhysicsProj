@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 import Feature_student from "./pages/Feature/Feature_student";
 import Feature_teacher from "./pages/Feature/Feature_teacher";
 import { Home, Login, Signup, SignupStudent, SignupTeacher, ForgotPassword, ResetPassword,
-          About, FAQ, Section,SingleQuiz,QuizList, Video, SingleVideo, BlogTopics, TopicBlogs} from "./pages/PageSrc";
+          About, FAQ, Section,SingleQuiz,QuizList, Video, SingleVideo, SingleVideo1,SingleVideo2,SingleVideo3,SingleVideo4, BlogTopics, TopicBlogs} from "./pages/PageSrc";
 import Student from "./pages/Student/Student";
 import Teacher from "./pages/Teacher/Teacher";
 import Student_join from "./pages/Student_join/Student_join";
@@ -19,8 +19,12 @@ function App() {
         <Route path="/about" exact component={About} />
         <Route path="/quiz/:qid" exact component={SingleQuiz} />
         <Route path="/quiz" exact component={QuizList} />
-        <Route path="/lecture/:vid" exact component={SingleVideo} />
-        <Route path="/lecture" exact component={Video} />
+        <Route path="/learn/super1" exact component={SingleVideo} />
+        <Route path="/learn/super2" exact component={SingleVideo1} />
+        <Route path="/learn/super3" exact component={SingleVideo2} />
+        <Route path="/learn/super4" exact component={SingleVideo3} />
+        <Route path="/learn/super5" exact component={SingleVideo4} />
+        <Route path="/learn" exact component={Video} />
         <Route path="/blogs/:topic" exact component={TopicBlogs} />
         <Route path="/blogs" exact component={BlogTopics} />
         <Route path="/signup" exact component={Signup} />

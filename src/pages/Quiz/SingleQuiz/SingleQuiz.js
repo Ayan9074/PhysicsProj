@@ -9,16 +9,16 @@ class SingleQuiz extends React.Component {
     questionData: [],
     progress: 0,
     score: 0,
-    time:Date.now() + 180000,
-    showInstruction:true
+    time: Date.now() + 180000,
+    showInstruction: true
   };
 
   finishTimer = () => {
     setTimeout(() => {
       this.setState({
-        progress:5
+        progress: 5
       })
-    },180000)
+    }, 180000)
   }
 
   componentDidMount() {
@@ -28,49 +28,29 @@ class SingleQuiz extends React.Component {
   fetchData = () => {
     let fetchedQuestion = [
       {
-        prompt: "Everything in React is a _________",
-        answers: ["Module", "Component", "Package", "Class"],
+        prompt: "What is a superconductor?",
+        answers: ["A material that conducts electricity with high resistance", "A material that conducts electricity with no resistance", "A type of semiconductor", "A type of insulator"],
         correct: 1,
       },
       {
-        prompt: "In which directory React Components are saved?",
-        answers: [
-          "Inside js/components/",
-          "Inside vendor/components/",
-          "Inside vendor/components/",
-          "Inside vendor/",
-        ],
+        prompt: "At what temperature do most superconductors operate?",
+        answers: ["Room temperature", "High temperature", "Below 150K", "None of the above"],
+        correct: 2,
+      },
+      {
+        prompt: "What phenomenon causes the expulsion of magnetic fields from a superconductor?",
+        answers: ["Meissner effect", "Quantum locking", "Hall effect", "Faraday's law of induction"],
         correct: 0,
       },
       {
-        prompt: "What is Babel?",
-        answers: [
-          "A transpiler.",
-          "An interpreter",
-          "A Compiler",
-          "Both Compiler and Transpilar",
-        ],
-        correct: 3,
-      },
-      {
-        prompt: "How many elements does a react component return?",
-        answers: [
-          "1 Element",
-          "2 Elements",
-          "Multiple Elements",
-          "None of the above",
-        ],
+        prompt: "Which material is known for its high-temperature superconductivity?",
+        answers: ["Aluminum", "Lead", "Yttrium Barium Copper Oxide", "Silicon"],
         correct: 2,
       },
       {
-        prompt: "What is ReactJS?",
-        answers: [
-          "Server-side Framework",
-          "User-interface framework",
-          "A Library for building interaction interfaces",
-          "None of the above",
-        ],
-        correct: 2,
+        prompt: "What is one of the applications of superconductors?",
+        answers: ["Power lines", "Heat engines", "Thermal insulators", "Light bulbs"],
+        correct: 0,
       },
     ];
 
@@ -80,12 +60,12 @@ class SingleQuiz extends React.Component {
   };
 
   checkAnswer = (index) => {
-    if(!this.state.questionData[this.state.progress]){
+    if (!this.state.questionData[this.state.progress]) {
       return;
     }
     var correct = this.state.questionData[this.state.progress].correct;
     var newScore = 0,
-      newProgress = 0;
+        newProgress = 0;
     if (correct === index) {
       newScore = this.state.score + 1;
       this.setState({ score: newScore });
@@ -98,26 +78,20 @@ class SingleQuiz extends React.Component {
   };
 
   resetQuiz = () => {
-    this.setState({ score: 0, progress: 0,time:Date.now() + 180000 });
+    this.setState({ score: 0, progress: 0, time: Date.now() + 180000 });
     this.finishTimer()
   };
 
   render() {
-
-    // NEED ISAUTH VARIABLE WHICH WILL KEEP RECORD IF USER IS AUTHENTICATED
-    // IF YES THEN ALLOW THE USER TO TAKE THE QUIZ
-    // IF NOT THEN REDIRECT TO LOGIN PAGE
-
-
     var questionDatum = this.state.questionData[this.state.progress];
 
-    if (this.state.showInstruction){
+    if (this.state.showInstruction) {
       return (
-      <Instruction closeInstruction={() => {
-          this.setState({showInstruction:false,time:Date.now() + 180000})
-          this.finishTimer()
-        }} 
-      />
+        <Instruction closeInstruction={() => {
+            this.setState({ showInstruction: false, time: Date.now() + 180000 })
+            this.finishTimer()
+          }} 
+        />
       )
     }
 
@@ -131,7 +105,7 @@ class SingleQuiz extends React.Component {
             questionDatum={questionDatum}
             time={this.state.time}
             attempted={this.state.progress}
-            notattempted={this.state.questionData.length-this.state.progress}
+            notattempted={this.state.questionData.length - this.state.progress}
           />
         </div>
       );

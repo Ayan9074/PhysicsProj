@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.simulation {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.superconductor {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px; /* Adjust based on intensity */
+}
+
+.magnetic-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+
+input[type="range"] {
+    width: 50%;
+}
+
+label {
+    font-size: 16px;
+    margin-top: 20px;
+}

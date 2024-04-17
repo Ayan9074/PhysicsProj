@@ -12,5 +12,10 @@ export { default as SingleQuiz } from "./Quiz/SingleQuiz/SingleQuiz";
 export { default as QuizList } from "./Quiz/QuizList/QuizList";
 export { default as Video } from "./Video/Video";
 export { default as SingleVideo } from "./SingleVideo/SingleVideo";
+export { default as SingleVideo1 } from "./SingleVideo1/SingleVideo1";
+export { default as SingleVideo2 } from "./SingleVideo2/SingleVideo2";
+export { default as SingleVideo3 } from "./SingleVideo3/SingleVideo3";
+export { default as SingleVideo4 } from "./SingleVideo4/SingleVideo4";
+
 export { default as BlogTopics } from "./Blogs/BlogTopics";
 export { default as TopicBlogs } from "./Blogs/BlogTopics.data";

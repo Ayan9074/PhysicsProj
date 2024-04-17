@@ -22,7 +22,7 @@
     "react-redux": "^7.2.4",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "2.1.8",
     "react-simple-chatbot": "^0.6.1",
     "react-spinners": "^0.11.0",
     "react-toastify": "^7.0.4",
@@ -45,7 +45,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [

@@ -24,30 +24,20 @@
 }
 .choose_sec {
   width: 97%;
-  height: 140vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: auto;
   margin-bottom: 3rem;
-  background: url("../../assets/section-img.png")
-    no-repeat center;
 }
 .section_under {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 90%;
 
   margin: 1.5rem auto 3rem auto;
-  height: 40vh;
-}
-.sec-middle {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  margin: 3rem auto 5rem auto;
   height: 40vh;
 }
 #chatbot ::-webkit-scrollbar{
@@ -73,21 +63,11 @@
 }
 
 
-@media (max-width: 1300px) {
-  .section_under {
-    height: 40vh;
-  }
-  .sec-middle {
-    height: 40vh;
-  }
-}
 @media (max-width: 1050px) {
   .section_under {
     height: 45vh;
   }
-  .sec-middle {
-    height: 45vh;
-  }
+
 }
 
 @media (max-width: 900px) {
@@ -97,11 +77,7 @@
   }
 }
 @media (max-width: 800px) {
-  .choose_sec {
-    background: url("../../assets/section-img.png") no-repeat center;
-    height: 150vh;
-    background-size: 100%;
-  }
+
 }
 @media (max-width: 690px) {
   .section_under {
@@ -110,15 +86,8 @@
     height: 90vh;
 
   }
-  .sec-middle {
-    background-size: 80%;
-    align-items: center;
-    flex-direction: column;
-    height: 150vh;
-  }
   .choose_sec {
-    background: url("../../assets/section-img.png") no-repeat center;
-    height: 300vh;
+    height: 220vh;
     color: black;
   }
   #chatbot ::-webkit-scrollbar{

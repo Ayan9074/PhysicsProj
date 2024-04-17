@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.diagram {
+    width: 50%;
+    max-width: 100px;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+.content {
+    text-align: left;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #555;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}

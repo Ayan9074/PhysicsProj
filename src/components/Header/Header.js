@@ -45,18 +45,6 @@ const Header = (props) => {
        
         <div className="nav_links"><Nav /></div>
         
-        <div className="header__btn--container">
-          <ul className="header__btn--ul">
-            <li className="header__btn--login header__btn--a">
-              <Link to="/login" className="scroll_color_change">
-                Login
-              </Link>
-            </li>
-            <li className="header__btn--get header__btn--a">
-              <Link to="/signup">Sign up</Link>
-            </li>
-          </ul>
-          </div>
         <DarkModeToggle
           className="dark_mode_toogle"
           onChange={handleThemeBtn}

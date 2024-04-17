@@ -19,7 +19,7 @@ const QuizList = () => {
           {QUIZ_LIST.map((item) => (
             <div className="quizlist__quiz--card">
               <Link to={`/quiz/${item.qid}`}>
-                <h1>{item.title}</h1>
+                <h1>SuperConductor Quiz</h1>
                 <p>No. Of Question : {item.questionLength}</p>
               </Link>
             </div>
